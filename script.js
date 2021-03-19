@@ -1,11 +1,11 @@
 import Citation from "./citations.js";
 
-const theme = document.getElementById("theme"); // kam || philo
-const select = document.getElementById("nbSelect"); //number
-const validate = document.getElementById("run"); // valider//
+const theme = document.getElementById("theme"); // Selection du choix du theme
+const select = document.getElementById("nbSelect"); // Selection du choix du nombre
+const validate = document.getElementById("run"); // Selection le  button Valité
 
 validate.addEventListener("click", () => {
   let run = new Citation(select.value, theme.value);
 });
 
-// script qui gere le l'affiche front//
+// script qui permet de selectionné mes elements dans le html

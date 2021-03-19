@@ -1,0 +1,31 @@
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+button {
+  width: 300px;
+  margin-top: 10%;
+  margin-left: 40%;
+}
+
+label {
+  font-size: 20px;
+}
+
+.container-flex {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.citation {
+  font-size: 20px;
+  margin-left: 5%;
+  margin-top: 10%;
+}

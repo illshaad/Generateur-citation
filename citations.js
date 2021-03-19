@@ -1,6 +1,9 @@
 export default class Citation {
   constructor(nb, theme) {
     this.citDiv = document.getElementById("citations");
+
+    //Création de la donnée
+
     this.data = {
       philosophie: {
         start: [
@@ -69,14 +72,25 @@ export default class Citation {
     this._citationGenerator(nb, theme);
   }
 
+  //Math Round arrondi au chiffre le plus proche plus proche de 0 ou 1//
+  //Method Ramdom me renvoie un chiffre fraction //
+  //Function qui permet de recupere la longeur de mes array (start , middle , end) et de me renvoyé un entier qui servira d'index//
   _numGenerator(length) {
-    return Math.floor(Math.random() * length);
+    return Math.round(Math.random() * length);
   }
+
+  //Function qui permet de recuperer le nombre selection et le choix du theme,
+  //Variable qui permet de récuperer l'objet theme(phli || kamlot)//
+  //Création d'une array vide//
+  //je construie mon array qui va s'afficher dans la balise citation//
+  // Nb le nombre de citation que je generer et je boucle sur la citation pour m'afficher 1 à 5 le texte assemblé avec le start , middle , end pour le mettre en une seul string que je push dans mon array
+  //Je join pour afficher sous form de string parce que le innerHtml accepte des String//
+  //Iteration sur le nb qui va me generer les phrases dans mon array//
 
   _citationGenerator(nb, theme) {
     const d = this.data[theme];
     let cit = [];
-    for (let i = 0; i < +nb; i++) {
+    for (let i = 0; i < nb; i++) {
       cit.push(
         `<p>${d.start[this._numGenerator(d.start.length)]} ${
           d.middle[this._numGenerator(d.middle.length)]
@@ -86,6 +100,3 @@ export default class Citation {
     this.citDiv.innerHTML = cit.join("");
   }
 }
-
-// this.citDiv = document.getElementById("citations"); ==> permet d'afficher la citation dans le front//
-// classe qui permet de crée ta citation//

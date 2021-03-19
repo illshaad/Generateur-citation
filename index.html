@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Citation Generator</title>
   </head>
   <body>
-    <h1 style="text-align: center">Citations Generator</h1>
-    <section>
+    <h1>Citations Generator</h1>
+    <section class="container-flex">
       <div>
         <label for="nbSelect">Combien de citations voulez vous générer</label>
         <input type="number" min="1" max="5" name="nbSelect" id="nbSelect" />
@@ -20,10 +27,10 @@
           <option value="philosophie">Philosophie</option>
         </select>
       </div>
-      <button id="run">Valider</button>
     </section>
+    <button class="btn btn-primary" id="run">Valider</button>
     <section>
-      <div id="citations"></div>
+      <div class="citation" id="citations"></div>
     </section>
     <script type="module" src="./script.js"></script>
   </body>
